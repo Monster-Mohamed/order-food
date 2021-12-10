@@ -1,0 +1,9 @@
+// we must use @use in this system
+@use "../helpers/var" as *;
+@use "../helpers/mixins" as m;
+
+// this button is for example to explain the @use
+.main_btn {
+  @include m.buttons($main_color);
+}
+// you can remove it if you want

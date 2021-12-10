@@ -1,0 +1,11 @@
+// we must use @use in this system
+@use "../helpers/var" as *;
+@use "../helpers/mixins" as m;
+
+// this alert is for example to explain the @use
+.main_alert {
+  // to use mixin called alerts we must write that
+  // alerts takes (background, border-color, text-color)
+  @include m.alerts($main_color, $secondary_color, $dark_color);
+}
+// you can remove it if you want

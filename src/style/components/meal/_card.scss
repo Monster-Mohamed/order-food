@@ -1,0 +1,25 @@
+@use "../../helpers/var" as *;
+@use "../../helpers/mixins" as m;
+.card {
+  @include m.grid_flex();
+  width: 100%;
+  line-height: 1.5;
+  border-bottom: 1px solid rgba($dark_color, 0.1);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  h2 {
+    font-size: $font_size + 0.4;
+    color: rgba($dark_color, 0.8);
+    font-weight: bold;
+  }
+
+  p {
+    font-style: italic;
+  }
+
+  span {
+    color: $main_color;
+    font-weight: bold;
+    font-size: $font_size + 0.2;
+  }
+}

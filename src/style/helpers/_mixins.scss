@@ -1,0 +1,77 @@
+@use "../helpers/var" as *;
+// -------------- ~~ please if you don't use mixin delete it ~~ -----------------------
+// for grid your app
+@mixin grid_flex($fd: row, $jc: space-between) {
+  display: flex;
+  flex-direction: $fd;
+  flex-wrap: wrap;
+  justify-content: $jc;
+}
+
+// for handle the background image
+@mixin backgroundImg($img) {
+  background-image: $img;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+// for handle the buttons in the app
+@mixin buttons($color) {
+  all: unset;
+  background-color: $color;
+  padding: 0.4rem 1.2rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  border-radius: $radius + 1;
+  color: $white_color;
+}
+
+// for handle the alerts in the app
+@mixin alerts($background, $border_color, $text_color) {
+  background-color: $background;
+  border: 1px solid $border_color;
+  float: left;
+  padding: 20px 30px;
+  width: 100%;
+  margin: 1rem 0;
+
+  .alert_text {
+    color: $text_color;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 20px;
+    text-shadow: 1px 1px rgba(250, 250, 250, 0.3);
+  }
+}
+
+// for center the element [ abselute || fixed ] only
+@mixin center_position($position) {
+  position: $position;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// for the first img in the app or the img that under the navbar
+@mixin img_first($background) {
+  @include backgroundImg($background);
+  width: 100%;
+  height: 40rem;
+  left: 0;
+  position: absolute;
+  color: $white_color;
+  text-align: center;
+  h1 {
+    position: relative;
+    top: $sizes * 7;
+    font-size: $big_title;
+  }
+  p {
+    position: relative;
+    top: $sizes * 9;
+    font-size: $font_size;
+    font-family: $horror_font !important;
+  }
+}

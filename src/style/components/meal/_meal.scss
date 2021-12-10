@@ -1,0 +1,10 @@
+@use "../../helpers/var" as *;
+@use "card";
+.meal {
+  width: 80vw;
+  margin: 4rem auto;
+  background: $white_color;
+  padding: 1rem;
+  border-radius: $radius;
+  border: 1px solid rgba($dark_color, 0.2);
+}
